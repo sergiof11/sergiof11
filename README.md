@@ -4,12 +4,15 @@ I'm a junior backend developer building REST APIs with Python, FastAPI and Postg
 
 ## Featured project
 
-**[Task Manager API](https://github.com/sergiof11/task-manager-api)** lets users register, sign in and manage their own tasks.
+**[Task Manager API](https://github.com/sergiof11/task-manager-api)** is a production-ready REST API that lets users register, sign in and securely manage their own tasks.
 
-- **Access control** — The API authenticates requests with JWT and restricts each user to their own tasks.
-- **Database** — SQLAlchemy handles persistence in PostgreSQL. Alembic manages schema migrations.
+[Live Swagger API](https://task-manager-api-eb12.onrender.com/docs) · [v1.0.0](https://github.com/sergiof11/task-manager-api/releases/tag/v1.0.0)
+
+- **Access control** — JWT authentication restricts each user to their own tasks.
+- **Database** — SQLAlchemy handles PostgreSQL persistence and Alembic manages schema migrations.
+- **Cloud deployment** — The Dockerized FastAPI service runs on Render with a Neon PostgreSQL database connected over SSL.
 - **Local development** — Docker Compose runs the API and PostgreSQL together in separate containers.
-- **Testing and CI** — GitHub Actions runs Ruff checks and a Pytest suite that uses a dedicated PostgreSQL test database.
+- **Testing and CI** — GitHub Actions runs Ruff, Alembic migrations and the Pytest suite with coverage checks.
 
 ## Tech stack
 
@@ -18,8 +21,9 @@ I'm a junior backend developer building REST APIs with Python, FastAPI and Postg
 | Backend | Python, FastAPI, Pydantic |
 | Database | PostgreSQL, SQLAlchemy, Alembic |
 | Security | JWT (PyJWT), Argon2 (pwdlib) |
-| Testing and quality | Pytest, Ruff |
-| Containers | Docker, Docker Compose |
+| Testing and quality | Pytest, pytest-cov, Ruff |
+| Infrastructure | Docker, Docker Compose |
+| Cloud | Render, Neon |
 | Tools and CI | Git, GitHub, GitHub Actions |
 
 [LinkedIn](https://www.linkedin.com/in/sergio-fern%C3%A1ndez11)
